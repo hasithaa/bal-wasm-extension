@@ -1,15 +1,23 @@
 {
   "name": "bal-wasm-extension",
   "displayName": "Ballerina WASM Extension",
+  "description": "Ballerina language support with WASM",
   "version": "0.1.0",
+  "publisher": "Hasitha Aravinda",
   "engines": {
     "vscode": "^1.80.0"
+  },
+  "categories": ["Programming Languages"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/bal-wasm-extension.git"
   },
   "main": "./dist/extension.js",
   "scripts": {
     "vscode:prepublish": "npm run build",
     "build": "npm run build:wasm && webpack --mode production",
     "build:wasm": "cd src/rust && wasm-pack build --target nodejs --out-dir ../../pkg",
+    "package": "vsce package",
     "watch": "webpack --mode development --watch",
     "clean": "rm -rf dist pkg node_modules"
   },
@@ -48,8 +56,12 @@
     "webpack": "^5.0.0",
     "webpack-cli": "^4.0.0"
   },
-  "files": [
-    "dist/**/*",
-    "out/**/*"
-  ]
+  "author": {
+    "name": "Your Name"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/bal-wasm-extension/issues"
+  },
+  "homepage": "https://github.com/yourusername/bal-wasm-extension#readme"
 }
